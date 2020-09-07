@@ -1,6 +1,6 @@
-package com.example.config;
+package com.ws.config;
 
-import com.example.handler.WsMessageHandler;
+import com.ws.handler.WsMessageHandler;
 import com.xinput.bootbase.interceptor.BaseWebSocketInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +23,7 @@ public class AppWebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry
-                .addHandler(wsMessageHandler, "/v1/ws/notify")
+                .addHandler(wsMessageHandler, "/ws")
                 .addInterceptors(baseWebSocketInterceptor)
                 .setAllowedOrigins("*");
     }

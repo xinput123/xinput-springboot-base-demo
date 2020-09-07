@@ -1,4 +1,4 @@
-package com.example;
+package com.ws;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +11,9 @@ import org.springframework.context.annotation.ComponentScan;
  * DataSourceAutoConfiguration 数据库启动类
  */
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
-@ComponentScan({"com.example", "com.xinput.bootbase"})
-public class App {
+@ComponentScan({"com.ws", "com.xinput.bootbase"})
+public class WsApp {
     public static void main(String[] args) {
-        SpringApplication.run(App.class);
+        SpringApplication.run(WsApp.class);
     }
 }

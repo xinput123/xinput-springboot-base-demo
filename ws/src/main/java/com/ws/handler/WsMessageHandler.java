@@ -1,10 +1,8 @@
-package com.example.handler;
+package com.ws.handler;
 
 import com.xinput.bleach.util.JsonUtils;
 import com.xinput.bootbase.consts.HeaderConsts;
 import com.xinput.bootbase.handler.AbstractTextWebSocketHandler;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -14,8 +12,6 @@ import java.util.Map;
 
 @Component
 public class WsMessageHandler extends AbstractTextWebSocketHandler {
-
-    private static final Logger logger = LoggerFactory.getLogger(WsMessageHandler.class);
 
     /**
      * 接收消息事件

@@ -5,6 +5,6 @@ server:
 
 spring:
   application:
-    name: websocket
-  profiles:
-    active: dev
+    name: ws
+  profiles
+  active: dev

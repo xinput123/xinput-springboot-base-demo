@@ -45,7 +45,7 @@ public class AppWebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry
-                .addHandler(wsMessageHandler, "/v1/ws/notify")
+                .addHandler(wsMessageHandler, "/ws")
                 .addInterceptors(baseWebSocketInterceptor)
                 .setAllowedOrigins("*");
     }
