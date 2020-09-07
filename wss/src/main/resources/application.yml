@@ -1,0 +1,31 @@
+server:
+  port: 8443
+  # Jetty 配置文件
+  jetty:
+    # 用于接收新连接，然后将任务交给 selectors 去做
+    acceptors: 2
+    selectors: 20
+    max-http-post-size: 20MB
+  # tomcat 配置，不用取消，反正也不会使用
+  tomcat:
+    min-spare-threads: 30
+    max-threads: 1000
+    uri-encoding: UTF-8
+    max-http-post-size: 20MB
+    max-connections: 5000
+  compression:
+    # 对于字节超过1024字节的内容，进行压缩
+    min-response-size: 1024
+  servlet:
+    context-path: /api
+  ssl:
+    key-store: classpath:keystore.jks
+    key-store-password: 123456
+    key-password: 123456
+    key-alias: tomcat
+
+spring:
+  application:
+    name: app
+  profiles:
+    active: dev

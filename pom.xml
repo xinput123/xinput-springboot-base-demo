@@ -11,6 +11,7 @@
     <modules>
         <module>websocket</module>
         <module>ws</module>
+        <module>wss</module>
     </modules>
 
     <properties>
