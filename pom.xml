@@ -9,9 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>websocket</module>
         <module>ws</module>
         <module>wss</module>
+        <module>graphQL-demo</module>
+        <module>sb-strategy</module>
     </modules>
 
     <properties>
